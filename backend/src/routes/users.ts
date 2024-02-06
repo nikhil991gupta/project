@@ -2,6 +2,8 @@ import express, { Request, Response } from "express";
 import User from "../models/user";
 import jwt from "jsonwebtoken";
 import { check, validationResult } from "express-validator";
+const cors = require('cors');
+
 // import verifyToken from "../middleware/auth";
 
 const router = express.Router();
