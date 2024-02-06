@@ -52,12 +52,13 @@ app.use(cookieParser())
 app.use(cors()); // Use cors middleware first
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+ 
 // Custom CORS headers middleware
 app.use(cors({
    origin: process.env.FRONTEND_URL,
    //methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
    credentials: true,
+   // to get rid off cors error
  }));
 
 // Endpoint for testing
